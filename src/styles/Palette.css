@@ -4,4 +4,7 @@
 
 .Palette-colors {
     height: 90%;
+
+    display: flex; /* Added */
+    flex-wrap: wrap; /* Added */
 }
