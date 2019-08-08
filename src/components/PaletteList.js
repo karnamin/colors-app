@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/styles";
 
 import MiniPalette from "./MiniPalette";
 
+// JSS styles
 const styles = {
     root: {
         backgroundColor: "blue",
@@ -34,10 +35,13 @@ const styles = {
     }
 };
 
+// PaletteList class sits at root and contains all the palettes
 class PaletteList extends Component {
+    // Goes to a particular Palette based on id
     goToPalette(id) {
         this.props.history.push(`/palette/${id}`);
     }
+
     render() {
         const { palettes, classes } = this.props;
         return (

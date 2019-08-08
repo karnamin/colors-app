@@ -4,20 +4,26 @@ import { Link } from "react-router-dom";
 
 import "../styles/ColorBox.css";
 
+// ColorBox class for a color box in a Palette
 class ColorBox extends Component {
     constructor(props) {
         super(props);
         this.state = { copied: false };
         this.changeCopyState = this.changeCopyState.bind(this);
     }
+
+    // Changes the state of copied
     changeCopyState() {
+        // changes the state of coped for 1500 ms
         this.setState({ copied: true }, () => {
             setTimeout(() => this.setState({ copied: false }), 1500);
         });
     }
+
     render() {
         const { name, background, moreUrl } = this.props;
         const { copied } = this.state;
+
         return (
             <CopyToClipboard text={background} onCopy={this.changeCopyState}>
                 <div style={{ background }} className="ColorBox">

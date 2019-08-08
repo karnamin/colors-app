@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 class SingleColorPalette extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    gatherShades() {}
+
     render() {
         return (
             <div>
